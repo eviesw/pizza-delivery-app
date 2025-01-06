@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-family: Barlow Condensed;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --tomato: #ff6347;
+  --tomato-hover: #ff4f2b;
+}
+
+@keyframes heartClick {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-heart-click {
+  animation: heartClick 0.3s ease-in-out;
+}
+
+.animate-fade-in-out {
+  animation: fadeInOut 2s ease-in-out;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+.btn-secondary {
+  @apply bg-amber-500 text-white hover:bg-amber-600;
+}
+
+.btn-danger {
+  @apply bg-[#ff6347] text-white hover:bg-[#ff4f2b];
+}
+
+.btn-success {
+  @apply bg-green-500 text-white hover:bg-green-600;
+}
